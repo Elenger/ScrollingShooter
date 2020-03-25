@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: e247813097c0ecd4dbea9e23c1d12b71
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8185931518830391993
+    second: ExplosionSpaceship_0
+  - first:
+      213: -8117014007164312468
+    second: ExplosionSpaceship_1
+  - first:
+      213: 5787684547801629635
+    second: ExplosionSpaceship_2
+  - first:
+      213: -4535854478536445463
+    second: ExplosionSpaceship_3
+  - first:
+      213: -2169413496639402629
+    second: ExplosionSpaceship_4
+  - first:
+      213: -7523199192279254410
+    second: ExplosionSpaceship_5
+  - first:
+      213: -6228808122760149922
+    second: ExplosionSpaceship_6
+  - first:
+      213: 2909823112453883228
+    second: ExplosionSpaceship_7
+  - first:
+      213: 4515905478764881668
+    second: ExplosionSpaceship_8
+  - first:
+      213: -8324085900793921114
+    second: ExplosionSpaceship_9
+  - first:
+      213: -3964020844748216725
+    second: ExplosionSpaceship_10
+  - first:
+      213: 2757866519979133582
+    second: ExplosionSpaceship_11
+  - first:
+      213: -2791778134610826271
+    second: ExplosionSpaceship_12
+  - first:
+      213: 6279371670058612470
+    second: ExplosionSpaceship_13
+  - first:
+      213: -8888468149200631496
+    second: ExplosionSpaceship_14
+  - first:
+      213: 6097957104777745342
+    second: ExplosionSpaceship_15
+  - first:
+      213: -5693355441426537954
+    second: ExplosionSpaceship_16
+  - first:
+      213: 5765032930328730431
+    second: ExplosionSpaceship_17
+  - first:
+      213: 3239421791794276868
+    second: ExplosionSpaceship_18
+  - first:
+      213: -1757458611964747877
+    second: ExplosionSpaceship_19
+  - first:
+      213: 5740749550339719305
+    second: ExplosionSpaceship_20
+  - first:
+      213: 2086585626822545212
+    second: ExplosionSpaceship_21
+  - first:
+      213: 5879077304094066109
+    second: ExplosionSpaceship_22
+  - first:
+      213: 1238444203416945325
+    second: ExplosionSpaceship_23
+  - first:
+      213: 4270457924766045686
+    second: ExplosionSpaceship_24
+  - first:
+      213: 1484608536206362889
+    second: ExplosionSpaceship_25
+  - first:
+      213: 1853477907255753890
+    second: ExplosionSpaceship_26
+  - first:
+      213: -6335926126000874414
+    second: ExplosionSpaceship_27
+  - first:
+      213: 7734836039111614968
+    second: ExplosionSpaceship_28
+  - first:
+      213: 4576928406007149233
+    second: ExplosionSpaceship_29
+  - first:
+      213: 2703095061063104947
+    second: ExplosionSpaceship_30
+  - first:
+      213: -1593499435196237707
+    second: ExplosionSpaceship_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ExplosionSpaceship_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dc07097aab56e80800000000000000
+      internalID: -8185931518830391993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionSpaceship_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64e91a24c29a5f80800000000000000
+      internalID: -8117014007164312468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionSpaceship_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3cbb78e6cf15050800000000000000
+      internalID: 5787684547801629635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplosionSpaceship_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e178fd32686d01c0800000000000000
+      internalID: -4535854478536445463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

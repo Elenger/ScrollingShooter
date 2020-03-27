@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
         //transform.rotation = deviceRotation;
         // transform.Translate(transform.up * _moveSpeed);
 
-        Vector3 vectorGyroMovement = new Vector3(Input.gyro.rotationRateUnbiased.x, 0f, 0f);
+        Vector3 vectorGyroMovement = new Vector3(0f, Input.gyro.rotationRateUnbiased.x, 0f);
         transform.Translate(vectorGyroMovement * _moveSpeed * Time.deltaTime);
 
         SpaceshipScreen();

@@ -12,6 +12,7 @@ public class DamageSystem : MonoBehaviour
         {
             _asteroidInfo.health = _asteroidInfo.health - collision.GetComponent<BulletInfo>().bulletDamage;
             _asteroidInfo.CheckHealth();
+            collision.gameObject.SetActive(false);
         }
     }
 }

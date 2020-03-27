@@ -15,15 +15,9 @@ public class BulletPooler : MonoBehaviour
         SharedInstance = this;
     }
 
-     void Start()
+    void Start()
     {
-        pooledObjects = new List<GameObject>();
-        for (int i = 0; i < amountToPool; i++)
-        {
-            GameObject obj = (GameObject)Instantiate(objectToPool);
-            obj.SetActive(false);
-            pooledObjects.Add(obj);
-        }
+            PoolFilling();
     }
 
     public GameObject GetPooledObject()
@@ -36,5 +30,22 @@ public class BulletPooler : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void SetNewPrefab(GameObject prefab)
+    {
+        objectToPool = prefab;
+        PoolFilling();
+    }
+
+    public void PoolFilling()
+    {
+        pooledObjects = new List<GameObject>();
+        for (int i = 0; i < amountToPool; i++)
+        {
+            GameObject obj = (GameObject)Instantiate(objectToPool);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
     }
 }

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private GameObject _bullet;
+    public GameObject bulletPrefab;
     [SerializeField] private float _duration;
     [SerializeField] private Collider2D _distance;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {     
         StartCoroutine(CallShotIntime());
     }
 

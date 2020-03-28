@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AsteroidPooler : MonoBehaviour
 {
+    [SerializeField] private AbilityFilling _abilityFilling;
     public static AsteroidPooler SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject[] objectToPool;
@@ -22,6 +23,7 @@ public class AsteroidPooler : MonoBehaviour
         {
             GameObject obj = (GameObject)Instantiate(objectToPool[Random.Range(0,3)]);
             obj.SetActive(false);
+            obj.GetComponent<AsteroidInfo>()._abilityFilling = _abilityFilling;
             pooledObjects.Add(obj);
         }
     }

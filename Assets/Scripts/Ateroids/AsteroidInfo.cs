@@ -5,6 +5,7 @@ using UnityEngine;
 public class AsteroidInfo : MonoBehaviour
 {
     [SerializeField] private AsteroidParams _params;
+    public AbilityFilling _abilityFilling;
     public int health;
     public GameObject explosionPrefab;
 
@@ -18,6 +19,10 @@ public class AsteroidInfo : MonoBehaviour
         if (health < 1)
         {
             SpawnExplosion();
+
+            _abilityFilling.countWhippedAsteroids += 1;
+            _abilityFilling.AbilityIsEnable();
+
             gameObject.SetActive(false);
         }
     }

@@ -21,14 +21,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //  Vector3 vectorMovement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f);
-        //  transform.Translate(vectorMovement.normalized * _moveSpeed * Time.deltaTime);
+        Vector3 vectorMovement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f);
+        transform.Translate(vectorMovement.normalized * _moveSpeed * Time.deltaTime);
 
-        //Quaternion deviceRotation = DeviceRotation.Get();
-        //transform.rotation = deviceRotation;
-        // transform.Translate(transform.up * _moveSpeed);
-
-        Vector3 vectorGyroMovement = new Vector3(0f, Input.gyro.rotationRateUnbiased.x, 0f);
+        Vector3 vectorGyroMovement = new Vector3(Input.gyro.rotationRateUnbiased.y, 0f, 0f);
         transform.Translate(vectorGyroMovement * _moveSpeed * Time.deltaTime);
 
         SpaceshipScreen();

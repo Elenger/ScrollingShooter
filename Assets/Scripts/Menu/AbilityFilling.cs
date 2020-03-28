@@ -7,7 +7,8 @@ public class AbilityFilling : MonoBehaviour
 {
     [SerializeField] private int _requiredAmountAsteroids;
     [SerializeField] private Image _imageAbility;
-    [SerializeField] private Animator _abilityAnimator;
+    [SerializeField] private Animator _animatorAbility;
+    [SerializeField] private Button _buttonAbility;
     private float _abilityPointsForEachAsteroid;
     public int countWhippedAsteroids;
 
@@ -15,6 +16,7 @@ public class AbilityFilling : MonoBehaviour
     void Start()
     {
         _abilityPointsForEachAsteroid = 1f / _requiredAmountAsteroids;
+        _buttonAbility.interactable = false;
     }
 
     // Update is called once per frame
@@ -31,8 +33,9 @@ public class AbilityFilling : MonoBehaviour
         }
         else
         {
-            _abilityAnimator.Play("AbilityAnimation");
+            _animatorAbility.Play("AbilityAnimation");
+            _buttonAbility.interactable = true;
         }
-    }
+    }   
 }
 

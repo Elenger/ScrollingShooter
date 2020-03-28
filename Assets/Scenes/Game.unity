@@ -1349,6 +1349,7 @@ GameObject:
   - component: {fileID: 1891335419}
   - component: {fileID: 1891335421}
   - component: {fileID: 1891335420}
+  - component: {fileID: 1891335422}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1370,8 +1371,8 @@ RectTransform:
   m_Father: {fileID: 391978194}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1414,7 +1415,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1891335422}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -1437,6 +1438,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891335418}
   m_CullTransparentMesh: 0
+--- !u!114 &1891335422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891335418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8000001, g: 0.8000001, b: 0.8000001, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1995296522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _requiredAmountAsteroids: 20
   _imageAbility: {fileID: 1887737172}
-  _abilityAnimator: {fileID: 1887737174}
+  _animatorAbility: {fileID: 1887737174}
+  _buttonAbility: {fileID: 1891335420}
   countWhippedAsteroids: 0
 --- !u!114 &2070110548
 MonoBehaviour:
@@ -1645,3 +1675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b734bb0bba457144a6cc98f44da317c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _abilityFilling: {fileID: 2070110547}
+  _poolerAsteroid: {fileID: 894848496}
+  _animatorAbility: {fileID: 1887737174}
+  _buttonAbility: {fileID: 1891335420}
+  _imageAbility: {fileID: 1887737172}

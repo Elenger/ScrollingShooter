@@ -27,7 +27,7 @@ public class AsteroidInfo : MonoBehaviour
         }
     }
 
-    private void SpawnExplosion()
+    public void SpawnExplosion()
     {
         GameObject explosion = ExplosionPooler.SharedInstance.GetPooledObject();
         if (explosion != null)

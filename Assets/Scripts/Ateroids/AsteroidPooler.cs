@@ -39,4 +39,13 @@ public class AsteroidPooler : MonoBehaviour
         }
         return null;
     }
+
+    public void ReturnAll()
+    {
+        foreach (GameObject asteroid in pooledObjects)
+        {
+            asteroid.GetComponent<AsteroidInfo>().SpawnExplosion();
+            asteroid.SetActive(false);
+        }
+    }
 }

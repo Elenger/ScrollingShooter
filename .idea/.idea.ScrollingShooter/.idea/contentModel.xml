@@ -20,10 +20,6 @@
             <e p="BulletAcceleration.cs" t="Include" />
             <e p="BulletInfo.cs" t="Include" />
             <e p="BulletParams.cs" t="Include" />
-            <e p="Hit" t="Include">
-              <e p="HitInfo.cs" t="Include" />
-              <e p="HitPooler.cs" t="Include" />
-            </e>
             <e p="Pool" t="Include">
               <e p="BulletPooler.cs" t="Include" />
               <e p="BulletReturnToPool.cs" t="Include" />

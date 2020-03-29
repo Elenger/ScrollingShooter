@@ -26,7 +26,6 @@ public class AsteroidPooler : MonoBehaviour
             obj.SetActive(false);
             AsteroidInfo asteroidInfo = obj.GetComponent<AsteroidInfo>();
             asteroidInfo._abilityFilling = _abilityFilling;
-            asteroidInfo.hitPrefab = _hitPrefab;
             pooledObjects.Add(obj);
         }
     }

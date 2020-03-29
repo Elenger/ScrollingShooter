@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +7,16 @@ public class AsteroidInfo : MonoBehaviour
 {
     [SerializeField] private AsteroidParams _params;
     public AbilityFilling _abilityFilling;
-    public GameObject hitPrefab;
     public GameObject explosionPrefab;
     public int health;
+    private Animator[] _animatorsArray;
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = transform.GetChild(0).GetComponent<Animator>();
+    }
+
 
     private void OnEnable()
     {
@@ -23,7 +31,7 @@ public class AsteroidInfo : MonoBehaviour
 
             _abilityFilling.countWhippedAsteroids += 1;
             _abilityFilling.AbilityIsEnable();
-
+            _animator.Play("DefaultState");
             gameObject.SetActive(false);
         }
     }

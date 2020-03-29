@@ -27,7 +27,7 @@ public class AbilityFilling : MonoBehaviour
 
     public void AbilityIsEnable()
     {
-        if (_requiredAmountAsteroids > countWhippedAsteroids)
+        if (_requiredAmountAsteroids >= countWhippedAsteroids)
         {
             _imageAbility.fillAmount += _abilityPointsForEachAsteroid;
         }

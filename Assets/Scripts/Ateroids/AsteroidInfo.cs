@@ -6,8 +6,9 @@ public class AsteroidInfo : MonoBehaviour
 {
     [SerializeField] private AsteroidParams _params;
     public AbilityFilling _abilityFilling;
-    public int health;
+    public GameObject hitPrefab;
     public GameObject explosionPrefab;
+    public int health;
 
     private void OnEnable()
     {

@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FixedScroll : MonoBehaviour 
+public class FixedScroll : MonoBehaviour
 {
-	public float			theScrollSpeed = 0.025f;
+    public float theScrollSpeed = 0.025f;
 
-	Transform 				theCamera;
+    [SerializeField] Transform theCamera;
 
-	void Start () 
-	{
-		theCamera = Camera.main.transform;	
-	}
-	
-	void Update ()
-	{
-		theCamera.position = new Vector3 ( theCamera.position.x, theCamera.position.y + theScrollSpeed, theCamera.position.z );
-//		theCamera.position = new Vector3 ( theCamera.position.x + theScrollSpeed, theCamera.position.y, theCamera.position.z );
-	}
+    void Start()
+    {
+        //theCamera = Camera.main.transform;
+    }
+
+    void Update()
+    {
+        theCamera.position = new Vector3(theCamera.position.x, theCamera.position.y + theScrollSpeed, theCamera.position.z);
+    }
 }

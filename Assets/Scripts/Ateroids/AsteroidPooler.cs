@@ -6,7 +6,6 @@ using UnityEngine;
 public class AsteroidPooler : MonoBehaviour
 {
     [SerializeField] private AbilityFilling _abilityFilling;
-    [SerializeField] private GameObject _hitPrefab;
     public static AsteroidPooler SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject[] objectToPool;

@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private Text _scoreText;
+    [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private SliderUltimate _sliderUltimate;
     private int _score;
     private void Update()
     {
+        if (Time.timeScale == 1)
+        {
         _score++;
-        _scoreText.text = _score.ToString() + " miles";
+        _scoreText.text = " " + _score + " miles";
         _sliderUltimate.ChangeSliderFilling(_score);
+        }
     }
 }

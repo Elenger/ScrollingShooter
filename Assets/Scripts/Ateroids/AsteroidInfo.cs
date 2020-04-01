@@ -9,14 +9,12 @@ public class AsteroidInfo : MonoBehaviour
     public AbilityFilling _abilityFilling;
     public GameObject explosionPrefab;
     public int health;
-    private Animator[] _animatorsArray;
     private Animator _animator;
 
     private void Start()
     {
         _animator = transform.GetChild(0).GetComponent<Animator>();
     }
-
 
     private void OnEnable()
     {

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -3731089057837312430}
   - component: {fileID: 4053829696493254838}
   - component: {fileID: 1283792032008076481}
-  - component: {fileID: -5178141878151535960}
+  - component: {fileID: -8166438533392316060}
   m_Layer: 9
-  m_Name: Bullet_Red
+  m_Name: Bullet_Purple
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7293996046894064910, guid: c0c6919c02ec29348963d249e1d2c745,
+  m_Sprite: {fileID: 3858497332801837486, guid: 5b17e07c97efc0a4c95581a0a800ae7e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletParams: {fileID: 11400000, guid: 0a24759fff50fad4faccf1610e4f3500, type: 2}
   bulletDamage: 0
---- !u!95 &-5178141878151535960
+--- !u!95 &-8166438533392316060
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ Animator:
   m_GameObject: {fileID: 2871528915927106488}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c161b385c8b3d084e875d6d45871eab3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4ad9defd86f531b4baeeb868593e091c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

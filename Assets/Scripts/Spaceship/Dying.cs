@@ -6,6 +6,7 @@ public class Dying : MonoBehaviour
 {
     [SerializeField] private GameObject _expSpaceshipPrefab;
     [SerializeField] private GameObject _spaceship;
+    [SerializeField] private AudioSource _explosionAudioSource;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,6 +16,7 @@ public class Dying : MonoBehaviour
 
     private void ExplosionInstantiate()
     {
+        _explosionAudioSource.Play();
         GameObject explosion = Instantiate(_expSpaceshipPrefab);
         explosion.transform.position = transform.position;
     }

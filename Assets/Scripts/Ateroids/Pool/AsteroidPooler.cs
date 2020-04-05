@@ -6,6 +6,7 @@ using UnityEngine;
 public class AsteroidPooler : MonoBehaviour
 {
     [SerializeField] private AbilityFilling _abilityFilling;
+    [SerializeField] private AudioSource _explosionAudioSource;
     public static AsteroidPooler SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject[] objectToPool;
@@ -24,6 +25,7 @@ public class AsteroidPooler : MonoBehaviour
             GameObject obj = (GameObject)Instantiate(objectToPool[Random.Range(0,3)]);
             obj.SetActive(false);
             AsteroidInfo asteroidInfo = obj.GetComponent<AsteroidInfo>();
+            asteroidInfo.explosionAudioSource = _explosionAudioSource;
             asteroidInfo._abilityFilling = _abilityFilling;
             pooledObjects.Add(obj);
         }

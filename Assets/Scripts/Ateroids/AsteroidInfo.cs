@@ -6,10 +6,12 @@ using UnityEngine;
 public class AsteroidInfo : MonoBehaviour
 {
     [SerializeField] private AsteroidParams _params;
+    public AudioSource explosionAudioSource;
     public AbilityFilling _abilityFilling;
     public GameObject explosionPrefab;
     public int health;
     private Animator _animator;
+    
 
     private void Start()
     {
@@ -26,7 +28,7 @@ public class AsteroidInfo : MonoBehaviour
         if (health < 1)
         {
             SpawnExplosion();
-
+            explosionAudioSource.Play();
             _abilityFilling.countWhippedAsteroids += 1;
             _abilityFilling.AbilityIsEnable();
             _animator.Play("DefaultState");

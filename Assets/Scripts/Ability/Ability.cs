@@ -11,18 +11,6 @@ public class Ability : MonoBehaviour
     [SerializeField] private Button _buttonAbility;
     [SerializeField] private Image _imageAbility;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UseAbility()
     {
         _buttonAbility.interactable = false;

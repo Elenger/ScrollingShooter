@@ -8,10 +8,10 @@ public class AsteroidPooler : MonoBehaviour
     [SerializeField] private AbilityFilling _abilityFilling;
     [SerializeField] private AudioSource _explosionAudioSource;
     [SerializeField] private Transform _parent;
+    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private GameObject[] objectToPool;
+    [SerializeField] private int amountToPool;
     public static AsteroidPooler SharedInstance;
-    public List<GameObject> pooledObjects;
-    public GameObject[] objectToPool;
-    public int amountToPool;
 
     void Awake()
     {

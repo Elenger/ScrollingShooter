@@ -6,10 +6,10 @@ using UnityEngine;
 public class ExplosionPooler : MonoBehaviour
 {
     [SerializeField] private Transform _parent;
+    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private GameObject objectToPool;
+    [SerializeField] private int amountToPool;
     public static ExplosionPooler SharedInstance;
-    public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
-    public int amountToPool;
 
     void Awake()
     {

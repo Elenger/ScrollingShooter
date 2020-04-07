@@ -7,6 +7,7 @@ public class AsteroidPooler : MonoBehaviour
 {
     [SerializeField] private AbilityFilling _abilityFilling;
     [SerializeField] private AudioSource _explosionAudioSource;
+    [SerializeField] private Transform _parent;
     public static AsteroidPooler SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject[] objectToPool;
@@ -19,11 +20,16 @@ public class AsteroidPooler : MonoBehaviour
 
     void Start()
     {
+        GameObject poolAsteroids = new GameObject("PoolAsteroids");
+        poolAsteroids.transform.SetParent(_parent.transform);
+        Transform poolTransform = poolAsteroids.transform;
+
         pooledObjects = new List<GameObject>();
         for (int i = 0; i < amountToPool; i++)
         {
             GameObject obj = (GameObject)Instantiate(objectToPool[Random.Range(0,3)]);
             obj.SetActive(false);
+            obj.transform.SetParent(poolTransform);
             AsteroidInfo asteroidInfo = obj.GetComponent<AsteroidInfo>();
             asteroidInfo.explosionAudioSource = _explosionAudioSource;
             asteroidInfo._abilityFilling = _abilityFilling;

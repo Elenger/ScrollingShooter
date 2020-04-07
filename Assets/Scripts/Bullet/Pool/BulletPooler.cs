@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BulletPooler : MonoBehaviour
 {
+    [SerializeField] private Transform _parent;
+    private Transform _poolTransform;
     public static BulletPooler SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject objectToPool;
@@ -17,7 +19,11 @@ public class BulletPooler : MonoBehaviour
 
     void Start()
     {
-            PoolFilling();
+        GameObject poolBullets = new GameObject("PoolBullets");
+        poolBullets.transform.SetParent(_parent.transform);
+        _poolTransform = poolBullets.transform;
+
+        PoolFilling();
     }
 
     public GameObject GetPooledObject()
@@ -44,6 +50,7 @@ public class BulletPooler : MonoBehaviour
         for (int i = 0; i < amountToPool; i++)
         {
             GameObject obj = (GameObject)Instantiate(objectToPool);
+            obj.transform.SetParent(_poolTransform);
             obj.SetActive(false);
             pooledObjects.Add(obj);
         }

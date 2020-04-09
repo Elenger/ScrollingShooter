@@ -11,18 +11,10 @@ public class AbilityFilling : MonoBehaviour
     [SerializeField] private Button _buttonAbility;
     private float _abilityPointsForEachAsteroid;
     public int countWhippedAsteroids;
-
-    // Start is called before the first frame update
     void Start()
     {
         _abilityPointsForEachAsteroid = 1f / _requiredAmountAsteroids;
         _buttonAbility.interactable = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void AbilityIsEnable()

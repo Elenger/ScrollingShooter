@@ -6,9 +6,10 @@ using UnityEngine;
 public class ExplosionPooler : MonoBehaviour
 {
     [SerializeField] private Transform _parent;
-    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private Stack<GameObject> pooledObjects;
     [SerializeField] private GameObject objectToPool;
     [SerializeField] private int amountToPool;
+    private Transform _poolTransform;
     public static ExplosionPooler SharedInstance;
 
     void Awake()
@@ -20,27 +21,37 @@ public class ExplosionPooler : MonoBehaviour
     {
         GameObject poolExplosions = new GameObject("PoolExplosions");
         poolExplosions.transform.SetParent(_parent.transform);
-        Transform poolTransform = poolExplosions.transform;
+        _poolTransform = poolExplosions.transform;
 
-        pooledObjects = new List<GameObject>();
+        pooledObjects = new Stack<GameObject>();
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject obj = (GameObject)Instantiate(objectToPool);
-            obj.transform.SetParent(poolTransform);
-            obj.SetActive(false);
-            pooledObjects.Add(obj);
+            CreateNewObject();
         }
+
+    }
+
+    private void CreateNewObject()
+    {
+        GameObject obj = (GameObject)Instantiate(objectToPool);
+        obj.transform.SetParent(_poolTransform);
+        obj.SetActive(false);
+        pooledObjects.Push(obj);
     }
 
     public GameObject GetPooledObject()
     {
-        for (int i = 0; i < pooledObjects.Count; i++)
+        if (pooledObjects.Count > 0)
         {
-            if (!pooledObjects[i].activeInHierarchy)
-            {
-                return pooledObjects[i];
-            }
+            return pooledObjects.Pop();
         }
-        return null;
+
+        CreateNewObject();
+        return pooledObjects.Pop();
+    }
+
+    public void ReturnToPool(GameObject obj)
+    {
+        pooledObjects.Push(obj);
     }
 }

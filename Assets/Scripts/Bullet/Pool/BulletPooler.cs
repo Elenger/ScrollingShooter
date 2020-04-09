@@ -6,10 +6,12 @@ using UnityEngine;
 public class BulletPooler : MonoBehaviour
 {
     [SerializeField] private Transform _parent;
-    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private Stack<GameObject> pooledObjects;
     [SerializeField] private GameObject objectToPool;
     [SerializeField] private int amountToPool;
+    private Dictionary<string, Stack<GameObject>> _stackBulletsPolls = new Dictionary<string, Stack<GameObject>>();
     private Transform _poolTransform;
+    private Dictionary<string, Transform> _transformPoolBullets = new Dictionary<string, Transform>();
     public static BulletPooler SharedInstance;
 
     void Awake()
@@ -26,33 +28,54 @@ public class BulletPooler : MonoBehaviour
         PoolFilling();
     }
 
+    private void CreateNewObject()
+    {
+        string name = objectToPool.name;
+        GameObject obj = (GameObject)Instantiate(objectToPool);
+        obj.transform.SetParent(_transformPoolBullets[name]);
+        obj.name = name;
+        obj.SetActive(false);
+        pooledObjects.Push(obj);
+    }
     public GameObject GetPooledObject()
     {
-        for (int i = 0; i < pooledObjects.Count; i++)
+        if (pooledObjects.Count>0) 
         {
-            if (!pooledObjects[i].activeInHierarchy)
-            {
-                return pooledObjects[i];
-            }
+            return pooledObjects.Pop();
         }
-        return null;
+
+        CreateNewObject();
+        return pooledObjects.Pop();
     }
 
     public void SetNewPrefab(GameObject prefab)
     {
         objectToPool = prefab;
-        PoolFilling();
+        if (!_stackBulletsPolls.TryGetValue(objectToPool.name, out pooledObjects))
+        {
+            PoolFilling();
+        }
+        pooledObjects = _stackBulletsPolls[objectToPool.name];
     }
 
     public void PoolFilling()
     {
-        pooledObjects = new List<GameObject>();
+        string name = objectToPool.name;
+        GameObject poolCurrentBullets = new GameObject(name);
+        poolCurrentBullets.transform.SetParent(_poolTransform);
+        _transformPoolBullets.Add(poolCurrentBullets.name, poolCurrentBullets.transform);
+
+        pooledObjects = new Stack<GameObject>();
         for (int i = 0; i < amountToPool; i++)
         {
-            GameObject obj = (GameObject)Instantiate(objectToPool);
-            obj.transform.SetParent(_poolTransform);
-            obj.SetActive(false);
-            pooledObjects.Add(obj);
+            CreateNewObject();
         }
+
+        _stackBulletsPolls.Add(name, pooledObjects);
+    }
+
+    public void ReturnToPool(GameObject obj)
+    {
+        _stackBulletsPolls[obj.name].Push(obj);
     }
 }

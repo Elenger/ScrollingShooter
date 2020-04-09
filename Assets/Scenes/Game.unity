@@ -3204,7 +3204,7 @@ MonoBehaviour:
   _parent: {fileID: 2047369536}
   objectToPool: {fileID: 2871528915927106488, guid: 95646553d22d2394abec7f89815d18ec,
     type: 3}
-  amountToPool: 20
+  amountToPool: 5
 --- !u!4 &894848495
 Transform:
   m_ObjectHideFlags: 0
@@ -3238,7 +3238,6 @@ MonoBehaviour:
   _abilityFilling: {fileID: 2070110547}
   _explosionAudioSource: {fileID: 7127647112877203156}
   _parent: {fileID: 2047369536}
-  pooledObjects: []
   objectToPool:
   - {fileID: 7697909372745647177, guid: 9f62c4c9af222dd4d8d5e2c4fe55f904, type: 3}
   - {fileID: 7697909372745647177, guid: 8047994df07ffc14ebcdd97d136e4ac4, type: 3}
@@ -3272,9 +3271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parent: {fileID: 2047369536}
-  pooledObjects: []
   objectToPool: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
-  amountToPool: 20
+  amountToPool: 2
 --- !u!60 &894848500
 PolygonCollider2D:
   m_ObjectHideFlags: 0

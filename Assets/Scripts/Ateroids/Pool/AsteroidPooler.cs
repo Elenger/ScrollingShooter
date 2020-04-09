@@ -11,6 +11,7 @@ public class AsteroidPooler : MonoBehaviour
     [SerializeField] private List<GameObject> pooledObjects;
     [SerializeField] private GameObject[] objectToPool;
     [SerializeField] private int amountToPool;
+    private Transform _poolTransform;
     public static AsteroidPooler SharedInstance;
 
     void Awake()
@@ -22,19 +23,30 @@ public class AsteroidPooler : MonoBehaviour
     {
         GameObject poolAsteroids = new GameObject("PoolAsteroids");
         poolAsteroids.transform.SetParent(_parent.transform);
-        Transform poolTransform = poolAsteroids.transform;
+        _poolTransform = poolAsteroids.transform;
 
         pooledObjects = new List<GameObject>();
         for (int i = 0; i < amountToPool; i++)
         {
             GameObject obj = (GameObject)Instantiate(objectToPool[Random.Range(0,3)]);
             obj.SetActive(false);
-            obj.transform.SetParent(poolTransform);
+            obj.transform.SetParent(_poolTransform);
             AsteroidInfo asteroidInfo = obj.GetComponent<AsteroidInfo>();
             asteroidInfo.explosionAudioSource = _explosionAudioSource;
             asteroidInfo._abilityFilling = _abilityFilling;
             pooledObjects.Add(obj);
         }
+    }
+
+    private void CreateNewObject()
+    {
+        GameObject obj = (GameObject)Instantiate(objectToPool[Random.Range(0, 3)]);
+        obj.SetActive(false);
+        obj.transform.SetParent(_poolTransform);
+        AsteroidInfo asteroidInfo = obj.GetComponent<AsteroidInfo>();
+        asteroidInfo.explosionAudioSource = _explosionAudioSource;
+        asteroidInfo._abilityFilling = _abilityFilling;
+        pooledObjects.Add(obj);
     }
 
     public GameObject GetPooledObject()

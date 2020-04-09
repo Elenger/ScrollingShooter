@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    [SerializeField] private float _duration;
+    [SerializeField] private float _reloadTime;
     [SerializeField] private Collider2D _distance;
+    private float _reloadCounter;
+    public GameObject bulletPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {     
-        StartCoroutine(CallShotIntime());
+    void FixedUpdate()
+    {
+        _reloadCounter += Time.deltaTime;
+        if (_reloadCounter > _reloadTime)
+        {
+            _reloadCounter -= _reloadTime;
+            Shot();
+        }
     }
 
-    // Update is called once per frame
     private void Shot()
     {
         GameObject bullet = BulletPooler.SharedInstance.GetPooledObject();
@@ -25,15 +29,5 @@ public class Shooting : MonoBehaviour
             bullet.GetComponent<BulletReturnToPool>().distance = _distance;
             bullet.SetActive(true);
         }
-    }
-
-
-    private IEnumerator CallShotIntime()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(_duration);
-            Shot();
-        }      
     }
 }

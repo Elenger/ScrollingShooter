@@ -11,6 +11,7 @@ public class BulletReturnToPool : MonoBehaviour
         if (collision == distance)
         {
             gameObject.SetActive(false);
+            BulletPooler.SharedInstance.ReturnToPool(gameObject);
         }
     }
 }

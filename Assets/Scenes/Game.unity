@@ -528,6 +528,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2871528915927106488, guid: 95646553d22d2394abec7f89815d18ec,
         type: 3}
+    - target: {fileID: 9207847208100731349, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6,
+        type: 3}
+      propertyPath: _reloadTime
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb2e69d6fcbbcf4eb36a02462f60ce6, type: 3}
 --- !u!1 &104554591
@@ -3197,7 +3202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parent: {fileID: 2047369536}
-  pooledObjects: []
   objectToPool: {fileID: 2871528915927106488, guid: 95646553d22d2394abec7f89815d18ec,
     type: 3}
   amountToPool: 20

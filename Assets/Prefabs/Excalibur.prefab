@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _expSpaceshipPrefab: {fileID: 139366, guid: 70ac10f60106c5d4eb80008794ea5c14, type: 3}
   _spaceship: {fileID: 1411858347042426}
+  _explosionAudioSource: {fileID: 0}
 --- !u!60 &3307224336697787590
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -218,10 +219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8150fea7144a8e042a542f43815f24a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reloadTime: 0.2
+  _distance: {fileID: 2444663109112012310}
   bulletPrefab: {fileID: 2871528915927106488, guid: 95646553d22d2394abec7f89815d18ec,
     type: 3}
-  _duration: 0.2
-  _distance: {fileID: 2444663109112012310}
 --- !u!1 &4469521492577973648
 GameObject:
   m_ObjectHideFlags: 0
